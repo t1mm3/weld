@@ -11,7 +11,11 @@ extern "C" {
 "##
     .trim();
 
-    let trailer = "}";
+    let trailer = r##"
+#ifdef __cplusplus
+}
+#endif
+"##
 
     cbindgen::Builder::new()
         .with_crate(crate_dir)

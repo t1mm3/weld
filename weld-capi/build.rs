@@ -16,6 +16,7 @@ extern "C" {
 }
 #endif
 "##
+    .trim();
 
     cbindgen::Builder::new()
         .with_crate(crate_dir)
